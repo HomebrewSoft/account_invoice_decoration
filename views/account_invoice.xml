@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="invoice_decoration_tree" model="ir.ui.view">
+        <field name="name">account.invoice.decoration.tree</field>
+        <field name="model">account.invoice</field>
+        <field name="inherit_id" ref="account.invoice_tree"/>
+        <field name="arch" type="xml">
+            <tree position="attributes">
+                <attribute name="decoration-danger">date_due&lt;current_date and state=='open'</attribute>
+            </tree>
+        </field>
+    </record>
+
+    <record id="invoice_decoration_supplier_tree" model="ir.ui.view">
+        <field name="name">account.invoice.decoration.supplier.tree</field>
+        <field name="model">account.invoice</field>
+        <field name="inherit_id" ref="account.invoice_supplier_tree"/>
+        <field name="arch" type="xml">
+            <tree position="attributes">
+                <attribute name="decoration-danger">date_due&lt;current_date and state=='open'</attribute>
+            </tree>
+        </field>
+    </record>
+</odoo>
