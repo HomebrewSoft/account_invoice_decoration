@@ -1,4 +1,4 @@
-Partner Unique VAT
-==================
+Account Invoice Decoration
+==========================
 
-Shows an alert if the VAT or the name of the partner is al ready registered.
+Set invoice tree rows as red if are over due
